@@ -1,7 +1,7 @@
 import joblib
 
 # Load the trained model
-model = joblib.load("file path of trained model ")
+model = joblib.load("file path of trained model ") #eg:rf_logic_depth_model.joblib
 
 # Predict depth
 features ="ouput from feature_extractor.py"
