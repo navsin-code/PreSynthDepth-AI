@@ -61,8 +61,8 @@ Steps:\
 
 Command:`python predict_depth.py`\
 Steps:\
-1.Ensure `rf_logic_depth_model.joblib` is in the same directory or update its path.
-2.Update features in the script to match your Verilog module’s features (e.g. [3, 6, 0, 0, 0.0, 1] for comparator_3bit).
+1.Ensure `rf_logic_depth_model.joblib` is in the same directory or update its path.\
+2.Update features in the script to match your Verilog module’s features (e.g. [3, 6, 0, 0, 0.0, 1] for comparator_3bit).\
 3.Run the script to print the predicted depth.
 
 ## Additional Information
