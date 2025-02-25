@@ -40,7 +40,7 @@ print("Cross-Validated MSE (std):", cv_scores.std())
 feature_names = ["Fan-In", "Op Count", "Nest Depth", "Dep Chain", "Gate Mix", "Reg Prox"]
 feature_importance = model.feature_importances_
 
-model_path = "model path on local directory"#.joblib extension
+model_path = "model path on local directory"#.joblib extension eg:rf_logic_depth_model.joblib
 joblib.dump(model, model_path)
 
 if os.path.exists(model_path):
