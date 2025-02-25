@@ -11,7 +11,7 @@ The repository contains all code collaterals, including feature extraction, mode
 - predict_depth.py: Uses the trained model to predict logic depth for a given Verilog module’s features.
 - diagrams.py:Visual representation of difference in depth calculated by AI module and calculated manually
 - combined_dataset.csv: Dataset of 56 Verilog modules with features and depths 0–3 (optional, for training).
-- Two example Verilog files for testing purposes. Personal files may also be used.
+- Two example Verilog files inside a 'verilog_example_files' folder for testing purposes. Personal files may also be used.
 - README.md: This file.
 
 ## Prerequisites
