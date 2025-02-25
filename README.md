@@ -31,8 +31,6 @@ Install these using pip:
 
 ## Environment Setup
 1)Clone the Repository
-`git clone https://github.com/your-username/pre-synth-depth-ai.git
-cd pre-synth-depth-ai`
 
 2)Install Dependencies: Run the pip command above to install required libraries. Ensure Python 3.8+ is installed and added to your PATH.
 
