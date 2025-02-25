@@ -75,6 +75,15 @@ Steps:\
 3.Ensure `rf_logic_depth_model.joblib` is in the same directory or update its path.\
 4.Two graphs of Feature Importance and Prediction Accuracy will appear.
 
+## Output Charts
+
+1)Prediction Analysis of 3_bit_comparator\
+![Image](https://github.com/user-attachments/assets/3df316da-cc3a-4610-b436-7cbc8ac95365)
+
+2)Prediction Analysis of simple_and\
+![Image](https://github.com/user-attachments/assets/afe3dbca-d1a6-42dc-815a-618463a0bf79)
+
+
 ## Additional Information
 1)Limitations: The current model is optimized for depths 0–3. For depths 4–5, it under-predicts as 3, indicating a need for an expanded dataset\
 2)Dependencies: All libraries are open-source and standard (scikit-learn, pandas, etc.), ensuring portability across environments.\
