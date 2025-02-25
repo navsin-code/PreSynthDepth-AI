@@ -55,7 +55,7 @@ Steps:\
 Command:`python train_model.py`\
 Steps:\
 1.Ensure `combined_dataset.csv` is in the same directory or update its path in the script.\
-2.Run the script to train the model, print predictions, MSE, cross-validated MSE, feature importance, and save the model as `rf_logic_depth_model.joblib`.\
+2.Run the script to train the model, print predictions, MSE, cross-validated MSE, feature importance, and save the model as `rf_logic_depth_model.joblib`.
 
 
 3)**Predict Logic Depth** (`predict_depth.py`):Use the trained model to predict the logic depth for a given set of features.
@@ -69,9 +69,10 @@ Steps:\
 4)**Visualize the data**(`diagrams.py`):With help of parser visualize how different AI value is from calculated value\
 Command:`python diagrams.py`\
 Steps:\
-1.Ensure verilog file is in the same directory
-2.Update the calclated value manually into code
-3.Two graphs of Feature Importance and Prediction Accuracy will appear.
+1.Ensure verilog file is in the same directory\
+2.Update the calclated value manually into code\
+3.Ensure `rf_logic_depth_model.joblib` is in the same directory or update its path.\
+4.Two graphs of Feature Importance and Prediction Accuracy will appear.
 
 ## Additional Information
 1)Limitations: The current model is optimized for depths 0–3. For depths 4–5, it under-predicts as 3, indicating a need for an expanded dataset\
