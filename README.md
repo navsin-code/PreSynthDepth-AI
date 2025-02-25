@@ -1,9 +1,9 @@
 # PreSynthDepth AI
 
 ## Overview
-Welcome to `PreSynthDepth AI`, a machine learning solution that predicts combinational logic depth in Verilog RTL pre-synthesis to identify potential timing violations early in chip design. This project uses a Random Forest Regressor to analyze Verilog modules.It’s ideal for engineers and students working on small RTL designs, with plans to scale for deeper logic (depths 4–5) in future work.
+Welcome to `PreSynthDepth AI`, a machine learning solution that predicts combinational logic depth in Verilog RTL pre-synthesis to identify potential timing violations early in chip design. This project uses a Random Forest Regressor to analyze Verilog modules.It’s ideal for engineers and students working on small RTL designs. This model can be scaled for deeper logic (depths 4–5) for future work.
 
-The repository contains all code collaterals, including feature extraction, model training, and prediction scripts, written in Python using open-source libraries. This README guides you on setting up the environment, running the code, and understanding its use.
+The repository contains all code collaterals, including feature extraction, model training, and prediction scripts, written in Python using open-source libraries. This README guides you on setting up the environment, running the code, and additional information.
 
 ## Repository Contents
 - feature_extractor.py: Extracts features (Fan-In, Op Count, etc.) from Verilog (.v) files.
