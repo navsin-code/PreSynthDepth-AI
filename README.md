@@ -9,6 +9,7 @@ The repository contains all code collaterals, including feature extraction, mode
 - feature_extractor.py: Extracts features (Fan-In, Op Count, etc.) from Verilog (.v) files.
 - train_model.py: Trains a Random Forest model on a dataset, calculates MSE, and saves the model.
 - predict_depth.py: Uses the trained model to predict logic depth for a given Verilog module’s features.
+- diagrams.py:Visual representation of difference in depth calculated by AI module and calculated manually
 - combined_dataset.csv: Dataset of 56 Verilog modules with features and depths 0–3 (optional, for training).
 - README.md: This file.
 
@@ -41,7 +42,7 @@ Save your Verilog modules (e.g., comparator_3bit.v) in a directory, or update fi
 If using train_model.py, ensure combined_dataset.csv is in the same directory or update the path. This CSV should have headers: Fan-In, Op Count, Nest Depth, Dep Chain, Gate Mix, Reg Prox, Logic Depth.
 
 ## How to Run the Code
-1)Feature Extraction (`feature_extractor.py`):Extract features from a Verilog file to analyze its logic depth.
+1)**Feature Extraction** (`feature_extractor.py`):Extract features from a Verilog file to analyze its logic depth.
 
 Command:`python feature_extractor.py`
 
@@ -50,20 +51,27 @@ Steps:\
 2.Run the script to print features (e.g. [3, 6, 0, 0, 0.0, 1] for comparator_3bit).\
 3.Features are returned as [Fan-In, Op Count, Nest Depth, Dep Chain, Gate Mix, Reg Prox].
 
-2)Train the Model and Calculate MSE (`train_model.py`):Train the Random Forest model on your dataset, calculate MSE, and save the model.\
+2)**Train the Model and Calculate MSE** (`train_model.py`):Train the Random Forest model on your dataset, calculate MSE, and save the model.\
 Command:`python train_model.py`\
 Steps:\
 1.Ensure `combined_dataset.csv` is in the same directory or update its path in the script.\
 2.Run the script to train the model, print predictions, MSE, cross-validated MSE, feature importance, and save the model as `rf_logic_depth_model.joblib`.\
-3.A bar chart of feature importance will also display.
 
-3)Predict Logic Depth (`predict_depth.py`):Use the trained model to predict the logic depth for a given set of features.
+
+3)**Predict Logic Depth** (`predict_depth.py`):Use the trained model to predict the logic depth for a given set of features.
 
 Command:`python predict_depth.py`\
 Steps:\
 1.Ensure `rf_logic_depth_model.joblib` is in the same directory or update its path.\
 2.Update features in the script to match your Verilog module’s features (e.g. [3, 6, 0, 0, 0.0, 1] for comparator_3bit).\
 3.Run the script to print the predicted depth.
+
+4)**Visualize the data**(`diagrams.py`):With help of parser visualize how different AI value is from calculated value\
+Command:`python diagrams.py`\
+Steps:\
+1.Ensure verilog file is in the same directory
+2.Update the calclated value manually into code
+3.Two graphs of Feature Importance and Prediction Accuracy will appear.
 
 ## Additional Information
 1)Limitations: The current model is optimized for depths 0–3. For depths 4–5, it under-predicts as 3, indicating a need for an expanded dataset\
